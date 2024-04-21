@@ -2,14 +2,17 @@
 	*{box-sizing: border-box;}
 
 	html{
-		font-size: 16px;
+		height: 100%;
+		min-width: 400px;
+		font-size: 1rem;
 		font-family: sans-serif;
 	}
 
 	body{
-		color:#000066;
-		margin: 0px auto;
+		color:#333333;
+		margin: 0px auto 40px;
 		max-width: 1200px;
+		height: 100%;
 		border-right: 1px solid #707070 ;
 		border-left: 1px solid #707070 ;
 	}
@@ -17,43 +20,17 @@
 
 	img{ max-width: 100%;}
 
-	.from{
-		margin: 0;
-		padding: 5px 0;
-		background-color: #008800;
-		color: #ffffff;
-		text-align: center;
-	}
-
-	footer{
-		width: 100%;
-		height:50px;
-		margin: 0;
-		padding: 5px 0;
-		text-align: center;	
-	}
-
-	a {color: #008800;}
+	a {color: #000088;}
     a:hover{color: #000088;}
 
 	ul{
 		list-style-type: none;
-		background-color: #008800;
-		color: #ffffe0;
+		background-color: #000088;
 		margin: 0;
 		padding: 3px 50px;
 		display: flex;
 		justify-content: right;
 		gap: 40px;
-	}
-
-	ul .menu{
-		list-style-type: square;
-		margin: 0;
-		padding: 0;
-		display: grid;
-		gap: 5px;
-		font-size: 14px;
 	}
 
 	.textlink a {
@@ -76,33 +53,76 @@
 		transition: transform 0.3s;
 	}
 
-	.textlink01 a:hover::after {
+	.textlink2 a {
+	    position: relative;
+    	color: #0000dd;
+    	text-decoration: none;
+		font-weight:bold;
+    }
+    .textlink2 a:hover {
+	    color: #aa00aa;
+    }
+    .textlink02 a::after {
+    	content: '';
+	    position: absolute;
+	    bottom: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 2px;
+    	background-color: #aa00aa;
+    	transform: scaleX(0);
+    	transition: transform 0.3s;
+    }
+
+
+	.textlink02,.textlink01 a:hover::after {
 		transform: scaleX(1);
 	}
 
-	.home_index{
-		margin: 0;
-		padding: 180px 80px 0px;
-		height: 300px;
-		background-image: url(img/topimg1.jpg);
+
+	.header{    /*タイトル*/
+        margin: 0;
+		padding: 80px;
+		width: 100%;
+        height: 150px;
+		background-image: url(img/header.jpg);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 	}
 
+	.from{
+		margin: 0;
+		padding: 5px 0;
+		background-color: #000088;
+		color: #ffffff;
+		text-align: center;
+	}
+
+	footer{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		text-align: center;	
+		position: sticky;
+		top: 100vh;
+		bottom: 0;
+	}
+
 	h1{
-		color: #440000;
+		color: #330055;
 		text-align: right;
 		text-shadow: 2px 3px 0 #ccccff;
 		font-size: 40px;
 	}
-	.main_class{
+	.main_index{
 		background-image: url(img/topimg3.jpg);
 		background-repeat: no-repeat;
 		background-position: right bottom;
 		background-size: 600px auto;	
 		margin: 0;
 	}
+	.main_class{ padding: 50px;}
 	.toumei{
 		background: linear-gradient(to top, rgba(255, 255, 255, 0) 10%,rgba(255, 255, 255, 1) 90%);
 	}
@@ -115,7 +135,20 @@
 
 
 
+
+
+	.quiz{
+		margin: 20px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 20px;
+	}
+
+
 @media (max-width:768px) {
+	bdy{
+		font-size: 50%;
+	}
     .main_class{
         flex-direction: column;
     }
@@ -128,6 +161,12 @@
 		height: 120px;
 	}
 
+	.quiz{ 
+		grid-template-columns: 1fr 1fr;
+		min-width: 300px;
+	}
+
 	h1{ font-size: 2rem;}
+	
 	.text{ padding: 10px;}
 }

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <title>学んできたこと</title>
+<style type="text/css">
+	*{box-sizing: border-box;}
+
+	html{
+		font-size: 16px;
+		font-family: sans-serif;
+	}
+
+    body{
+		color:#000066;
+		margin: 0px auto;
+        max-width: 1200px;
+        border-right: 1px solid #707070 ;
+        border-left: 1px solid #707070 ;
+	}
+
+	img{
+		max-width: 100%;
+	}
+
+	.from{
+		margin: 0;
+		padding: 5px 0;
+		background-color: #008800;
+		color: #ffffff;
+		text-align: center;
+	}
+
+	footer{
+		width: 100%;
+		height:50px;
+		margin: 0;
+		padding: 5px 0;
+		text-align: center;	
+	}
+
+    a {color: #008800;}
+    a:hover{color: #000088;}
+
+    ul{
+        list-style-type: none;
+        background-color: #008800;
+        color: #ffffe0;
+		margin: 0;
+		padding: 3px 50px;
+        display: flex;
+		justify-content: right;
+		gap: 40px;
+	}
+
+    ul .menu{
+        list-style-type: square;
+        margin: 0;
+		padding: 0;
+        display: grid;
+        gap: 5px;
+        font-size: 14px;
+	}
+
+    .textlink a {
+	    position: relative;
+    	color: #ffffe0;
+    	text-decoration: none;
+    }
+    .textlink a:hover {
+	    color: #eeeecc;
+    }
+    .textlink01 a::after {
+    	content: '';
+	    position: absolute;
+	    bottom: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 2px;
+    	background-color: #e0e0aa;
+    	transform: scaleX(0);
+    	transition: transform 0.3s;
+    }
+
+    .textlink01 a:hover::after {
+	    transform: scaleX(1);
+    }
+
+	.index{
+        margin: 0;
+		padding: 80px;
+        height: 150px;
+		background-image: url(img/topimg1.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	h1{
+		color: #003300;
+		text-align: right;
+		text-shadow: 2px 3px 0 #ccddee;
+		font-size: 30px;
+	}
+    h2{
+		margin: 6px 0 20px 0;
+		border-bottom: 2px solid #7a2020 ;
+		padding: 0 0 5px 0;
+		color: #7a2020;
+		font-size: 1.2rem;
+	}
+    .main_class{
+        padding: 50px;
+    }
+
+    .text{
+        margin: 0;
+        padding: 20px 200px 20px 70px;
+        line-height: 32px;
+    }
+	main .work{
+		margin: 0;
+        padding: 0px 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:10px;
+	}
+
+
+</style>
+</head>
+
+<body>
+	<h1 class="index">学んできたこと</h1>
+	<nav>
+        <ul class="textlink textlink01">
+            <li><a href="index.html".html">トップ</a></li>
+            <li><a href="career.html">職歴</a></li>
+			<li><a href="works.html">学んできたこと</a></li>
+            <li><a href="quiz.html">ミニクイズ</a></li>
+            <li><a href="link.html">リンク集</a></li>
+        </ul>
+    </nav>
+   
+	<main class="main_class">
+        <h2>C言語</h2>
+		<span class="work">
+			<a href="img/c_roop1.PNG" target="_blank"><img src="img/c_roop1.PNG" alt="C言語　roop関数"></a>
+			<a href="img/c_roop.PNG" target="_blank"><img src="img/c_roop.PNG" alt="C言語　roop関数"></a>
+		</span>
+		<div class="text">
+            C言語の基礎、２進数、ビットや関数について学びました。<br>
+			画像はif関数やroop関数を用いて、２つの数値を入力後に四則計算を選択し解を出力するプログラムです。
+        </div>
+        <br>
+        <h2>PLC</h2>
+		<span class="work">
+			<a href="img/plc_01.jpg" target="_blank" height="200px" ><img src="img/plc_01.jpg" alt="PLC配線"></a>
+			<a href="img/plc_x40.PNG" target="_blank"><img src="img/plc_x40.PNG" alt="PLCコード"></a>
+			<a href="img/plc_x40g.PNG" target="_blank"><img src="img/plc_x40g.PNG" alt="PLC_GOT画面"></a>
+		</span>
+        <div class="text">
+            PLC制御では実際にCPUとスイッチ、ボタン、ランプなどを配線で繋げ、プログラムを動かすことを学びました。
+			アナログ機器、GOTと接続してそれぞれから操作(入力)・表示(出力)したり、GOTの画面を作成しました。<br>
+			また、フィールドネットワークでは空気圧制御を行ってピストン操作を手動・自動で運転するプログラムを作成しました。
+        </div>
+        <br>
+        <h2>HTML/CSS・javascript</h2>
+        <div class="text">
+            HTMLの基礎から学びなおし、独学していた頃とは変更された点(フレームの削除)などを知ることができました。<br>
+			当時はわからなかったjavascriptの使い方、応用の仕方を学ぶことができ、とても有意義でした。こちらに関しては
+			<a href="quiz.html">[ミニクイズ]</a>に使用しています。<br>
+			このWEBページを作成する際のコンセプトは「見やすく・わかりやすく・迷わない設計」でした。<br>
+			トップ画像を決め、それに合わせたカラーに統一し、落ち着いた色合い、行間などにも気を配りました。<br>
+			できれば色覚のバリアフリーまで考えられたら良かったと思うので、そこは反省点です。
+
+        </div>
+        <br>
+        
+	</main>
+
+<footer>
+	<div>
+		<a class="top" href="#top">TOP</a>
+		<p class="from">Mar. 2024</p>
+	</div>
+</footer>
+
+</body>
+
+</html>

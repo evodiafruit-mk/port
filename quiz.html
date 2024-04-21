@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>ミニクイズ</title>
+    <link rel="stylesheet" href="pc_css.css" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+	<h1 class="header">ミニクイズ</h1>
+	<nav>
+        <ul class="textlink textlink01">
+            <li><a href="index.html".html">トップ</a></li>
+            <li><a href="career.html">職歴</a></li>
+			<li><a href="works.html">学んできたこと</a></li>
+            <li><a href="quiz.html">ミニクイズ</a></li>
+            <li><a href="link.html">リンク集</a></li>
+        </ul>
+    </nav>
+<main class="main_class">
+    <div>
+        以下の選択肢の中で、労働災害に認定されるものをすべて選んでください。<br>
+        ※あくまでも例ですが、実際にあった事例を参考に作成しています。
+    </div>
+
+	<div>
+    <ol class="quiz">
+        <li>
+            <img src="img/yakedo_hiyasu.png"><br>
+            <label><input type="checkbox" id="check1">昼休み中に給湯室でお湯がかかり火傷</label></li>
+        <li>
+            <img src="img/snow_korobu.png"><br>
+            <label><input type="checkbox" id="check2">通勤中に転倒して骨にヒビが入った</label></li>
+        <li>
+            <img src="img/bug_hachi_doku.png"><br>
+            <label><input type="checkbox" id="check3">始業前の準備体操中、ハチに刺された</label></li>
+        <li>
+            <img src="img/pet_kamu_dog.png"><br>
+            <label><input type="checkbox" id="check4">営業先のお宅のペットに噛まれた</label></li>
+    </ol>
+        <input type="button" value="解答" id="button1">
+        <p id="pastebox"></p>
+	</div>
+
+</main>
+	<script type="text/javascript">
+		<!--
+			let funcButton = document.getElementById('button1');
+            
+            funcButton.addEventListener('click', buttonClick);
+
+            function buttonClick(){
+                let pastedata = document.getElementById('pastebox');
+
+                if(check1.checked && check2.checked && check3.checked && check4.checked){
+                    pastedata.innerHTML = "正解です！";
+                    let myWindow = window.open('', 'myWindow', 'width=520, height=300'); 
+                    myWindow.document.write("<html><body>");
+                    myWindow.document.write("<b>すばらしい！正解です！</b>","<br><br>＜ 解説 ＞ <br>");
+                    myWindow.document.write("<p>実はこれら全て労災になります。厳密には通退勤中のケガは通勤災害に分類されるのですが、れっきとした労災なんです。<br><br>");
+                    myWindow.document.write("ちなみに勤務中・通退勤中の交通事故(私用での移動時は除く)は労務災害と自賠責保険の両方が適用されます。");
+                    myWindow.document.write("</p>");
+                    myWindow.document.write("</body></html>");
+                }
+                else if(!check1.checked && !check2.checked && !check3.checked && !check4.checked){
+                    pastedata.innerHTML = "チェックが入っていません";
+                }
+                else{
+                    pastedata.innerHTML = "残念...<br>"+"実はまだあるんですよ";
+                }
+            }
+
+		//-->
+	</script>
+<footer>
+	<div>
+		<p class="from">Mar. 2024</p>
+	</div>
+</footer>
+
+</body>
+
+</html>
